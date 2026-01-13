@@ -1,26 +1,60 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: 43 20% 97%; /* cream-50 */
+    --foreground: 30 9% 27%; /* umber-900 */
+    --card: 43 20% 99%; /* cream-100 */
+    --card-foreground: 30 9% 27%;
+    --popover: 43 20% 99%;
+    --popover-foreground: 30 9% 27%;
+    --primary: 25 60% 55%; /* clay-500 */
+    --primary-foreground: 43 20% 97%;
+    --secondary: 75 20% 50%; /* sage-500 */
+    --secondary-foreground: 43 20% 97%;
+    --muted: 40 10% 60%; /* ink-500 */
+    --muted-foreground: 40 10% 35%;
+    --accent: 40 40% 75%; /* parchment-400 */
+    --accent-foreground: 30 9% 27%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 40 30% 85%; /* parchment-300 */
+    --input: 40 30% 85%;
+    --ring: 25 60% 55%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 30 9% 15%; /* dark umber */
+    --foreground: 43 20% 97%;
+    --card: 30 9% 18%;
+    --card-foreground: 43 20% 97%;
+    --popover: 30 9% 18%;
+    --popover-foreground: 43 20% 97%;
+    --primary: 25 60% 60%;
+    --primary-foreground: 30 9% 15%;
+    --secondary: 75 20% 40%;
+    --secondary-foreground: 43 20% 97%;
+    --muted: 40 10% 25%;
+    --muted-foreground: 40 10% 65%;
+    --accent: 40 40% 30%;
+    --accent-foreground: 43 20% 97%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 43 20% 97%;
+    --border: 30 9% 25%;
+    --input: 30 9% 25%;
+    --ring: 25 60% 60%;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
 }
