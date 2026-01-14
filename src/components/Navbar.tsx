@@ -21,7 +21,7 @@ export default function Navbar() {
             href="/" 
             className="font-serif text-xl font-normal text-foreground hover:text-primary transition-colors"
           >
-            Hushed Ink
+            Hushed Ink on Paper
           </Link>
 
           {/* Navigation links */}
