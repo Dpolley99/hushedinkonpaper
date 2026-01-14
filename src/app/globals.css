@@ -4,48 +4,66 @@
 
 @layer base {
   :root {
-    --background: 43 20% 97%; /* cream-50 */
-    --foreground: 30 9% 27%; /* umber-900 */
-    --card: 43 20% 99%; /* cream-100 */
-    --card-foreground: 30 9% 27%;
-    --popover: 43 20% 99%;
-    --popover-foreground: 30 9% 27%;
-    --primary: 25 60% 55%; /* clay-500 */
-    --primary-foreground: 43 20% 97%;
-    --secondary: 75 20% 50%; /* sage-500 */
-    --secondary-foreground: 43 20% 97%;
-    --muted: 40 10% 60%; /* ink-500 */
-    --muted-foreground: 40 10% 35%;
-    --accent: 40 40% 75%; /* parchment-400 */
-    --accent-foreground: 30 9% 27%;
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 40 30% 85%; /* parchment-300 */
-    --input: 40 30% 85%;
-    --ring: 25 60% 55%;
-    --radius: 0.5rem;
+    --background: 32 40% 96%;       /* warm parchment */
+    --foreground: 24 18% 22%;       /* deep ink brown */
+
+    --card: 32 45% 98%;             /* soft paper */
+    --card-foreground: 24 18% 22%;
+
+    --popover: 32 45% 98%;
+    --popover-foreground: 24 18% 22%;
+
+    --primary: 18 55% 52%;          /* burnt clay */
+    --primary-foreground: 32 40% 96%;
+
+    --secondary: 10 35% 62%;        /* dusty rose */
+    --secondary-foreground: 24 18% 22%;
+
+    --muted: 28 25% 80%;            /* warm linen */
+    --muted-foreground: 24 15% 38%;
+
+    --accent: 22 45% 75%;           /* soft terracotta */
+    --accent-foreground: 24 18% 22%;
+
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 32 40% 96%;
+
+    --border: 28 30% 85%;           /* faded paper edge */
+    --input: 28 30% 85%;
+    --ring: 18 55% 52%;
+
+    --radius: 0.6rem;
   }
 
+
   .dark {
-    --background: 30 9% 15%; /* dark umber */
-    --foreground: 43 20% 97%;
-    --card: 30 9% 18%;
-    --card-foreground: 43 20% 97%;
-    --popover: 30 9% 18%;
-    --popover-foreground: 43 20% 97%;
-    --primary: 25 60% 60%;
-    --primary-foreground: 30 9% 15%;
-    --secondary: 75 20% 40%;
-    --secondary-foreground: 43 20% 97%;
-    --muted: 40 10% 25%;
-    --muted-foreground: 40 10% 65%;
-    --accent: 40 40% 30%;
-    --accent-foreground: 43 20% 97%;
-    --destructive: 0 62% 30%;
-    --destructive-foreground: 43 20% 97%;
-    --border: 30 9% 25%;
-    --input: 30 9% 25%;
-    --ring: 25 60% 60%;
+    --background: 24 20% 12%;       /* warm espresso */
+    --foreground: 32 40% 92%;       /* aged paper white */
+
+    --card: 24 20% 15%;
+    --card-foreground: 32 40% 92%;
+
+    --popover: 24 20% 15%;
+    --popover-foreground: 32 40% 92%;
+
+    --primary: 18 55% 58%;          /* glowing clay */
+    --primary-foreground: 24 20% 12%;
+
+    --secondary: 10 30% 45%;        /* muted rose */
+    --secondary-foreground: 32 40% 92%;
+
+    --muted: 24 15% 22%;
+    --muted-foreground: 32 25% 70%;
+
+    --accent: 22 40% 35%;           /* ember tone */
+    --accent-foreground: 32 40% 92%;
+
+    --destructive: 0 60% 40%;
+    --destructive-foreground: 32 40% 92%;
+
+    --border: 24 15% 25%;
+    --input: 24 15% 25%;
+    --ring: 18 55% 58%;
   }
 }
 
