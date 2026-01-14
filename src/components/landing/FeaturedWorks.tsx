@@ -1,35 +1,28 @@
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
+import { client } from '@/lib/sanity'
 
-// Placeholder data - will be replaced with Sanity data later
-const featuredWorks = [
-  {
-    id: '1',
-    title: 'Unspoken',
-    excerpt: 'Some silences carry more weight than a thousand words ever could.',
-    slug: 'unspoken',
-  },
-  {
-    id: '2',
-    title: 'Between Heartbeats',
-    excerpt: 'In the space between one breath and the next, I found you—and lost you again.',
-    slug: 'between-heartbeats',
-  },
-  {
-    id: '3',
-    title: 'Letters I Never Sent',
-    excerpt: 'Every word I swallowed became a ghost that haunts me still.',
-    slug: 'letters-i-never-sent',
-  },
-  {
-    id: '4',
-    title: 'The Last August',
-    excerpt: 'Summer endings taste like honey and regret, sweet and inevitable.',
-    slug: 'the-last-august',
-  },
-]
+interface FeaturedWork {
+  _id: string
+  title: string
+  excerpt: string
+  slug: string
+}
 
-export default function FeaturedWorks() {
+async function getFeaturedWorks(): Promise<FeaturedWork[]> {
+  const query = `*[_type == "post" && featured == true] | order(publishedAt desc)[0...4] {
+    _id,
+    title,
+    excerpt,
+    "slug": slug.current
+  }`
+  
+  return await client.fetch(query)
+}
+
+export default async function FeaturedWorks() {
+  const works = await getFeaturedWorks()
+
   return (
     <section className="py-32 relative overflow-hidden">
       {/* Decorative background */}
@@ -59,9 +52,9 @@ export default function FeaturedWorks() {
 
         {/* Featured works grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-          {featuredWorks.map((work, index) => (
+          {works.map((work, index) => (
             <Link
-              key={work.id}
+              key={work._id}
               href={`/blog/${work.slug}`}
               className="group block animate-fade-in"
               style={{ animationDelay: `${index * 100}ms` }}

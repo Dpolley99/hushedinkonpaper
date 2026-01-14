@@ -1,60 +1,22 @@
 import Link from 'next/link'
 import { Calendar } from 'lucide-react'
-// import { client } from '@/lib/sanity'
+import { client } from '@/lib/sanity'
+import { BlogPost } from '@/types/blog'
 
-// TODO: Uncomment when Sanity is ready
-// async function getAllPosts() {
-//   const query = `*[_type == "post"] | order(publishedAt desc) {
-//     _id,
-//     title,
-//     excerpt,
-//     "slug": slug.current,
-//     publishedAt,
-//     tags
-//   }`
-//   return await client.fetch(query)
-// }
-
-// Placeholder data
-const placeholderPosts = [
-  {
-    _id: '1',
-    title: 'The Way Light Finds You',
-    excerpt: 'You don\'t have to chase anything today. You don\'t need to conquer or climb.',
-    slug: 'the-way-light-finds-you',
-    publishedAt: '2024-01-15',
-    tags: ['reflection', 'stillness'],
-  },
-  {
-    _id: '2',
-    title: 'Unspoken',
-    excerpt: 'Some silences carry more weight than a thousand words ever could.',
-    slug: 'unspoken',
-    publishedAt: '2024-01-10',
-    tags: ['love', 'silence'],
-  },
-  {
-    _id: '3',
-    title: 'Between Heartbeats',
-    excerpt: 'In the space between one breath and the next, I found you—and lost you again.',
-    slug: 'between-heartbeats',
-    publishedAt: '2024-01-05',
-    tags: ['loss', 'memory'],
-  },
-  {
-    _id: '4',
-    title: 'Letters I Never Sent',
-    excerpt: 'Every word I swallowed became a ghost that haunts me still.',
-    slug: 'letters-i-never-sent',
-    publishedAt: '2024-01-01',
-    tags: ['longing', 'unsent'],
-  },
-]
+async function getAllPosts(): Promise<BlogPost[]> {
+  const query = `*[_type == "post"] | order(publishedAt desc) {
+    _id,
+    title,
+    excerpt,
+    "slug": slug.current,
+    publishedAt,
+    tags
+  }`
+  return await client.fetch(query)
+}
 
 export default async function BlogPage() {
-  // TODO: Uncomment when Sanity is ready
-  // const posts = await getAllPosts()
-  const posts = placeholderPosts
+  const posts = await getAllPosts()
 
   return (
     <div className="min-h-screen pt-24 pb-16">

@@ -16,7 +16,7 @@ export default function EditorialIntro() {
         {/* Title */}
         <div className="text-center mb-12">
           <h2 className="font-serif text-3xl md:text-4xl font-normal text-foreground mb-4">
-            The Way Light Finds You
+            WELCOME!
           </h2>
           <div className="w-16 h-0.5 bg-primary/30 mx-auto" />
         </div>
@@ -24,27 +24,13 @@ export default function EditorialIntro() {
         {/* Poem */}
         <div className="prose prose-lg max-w-none">
           <div className="font-light text-foreground/90 leading-loose space-y-4 text-center ">
-            <p className="mb-0">You don't have to chase anything today.</p>
-            <p className="mb-0">You don't need to conquer or climb.</p>
-            <p className="mb-0">Sometimes, life is not about reaching</p>
-            <p className="mb-0">But about noticing.</p>
+            <p className="mb-0">I’ve always believed that some of the most important parts of life happen quietly—between moments, in pauses, in small shifts of light. This space is my way of giving those moments a place to land.</p>
+            <p className="mb-0">Here, you’ll find poems written for anyone who moves gently through the world, who notices the subtle things, who feels deeply even when they don’t speak loudly. These pieces aren’t meant to impress; they’re meant to sit with you for a while, the way a soft morning does before the day begins.</p>
+            <p className="mb-0">Thank you for being here.
+            Whether you read one line or stay for the whole collection, I hope something in these words feels like it was meant for you.</p>
+            <p className="mb-0 mt-6">More is coming.</p>
             
-            <p className="mb-0 mt-6">The light doesn't always arrive in fanfare—</p>
-            <p className="mb-0">Sometimes it just slips through blinds</p>
-            <p className="mb-0">And lands quietly on your arm</p>
-            <p className="mb-0 italic">As if to say, "You're still here. Good."</p>
-            
-            <p className="mb-0 mt-6">There is wonder in letting the world come to you.</p>
-            <p className="mb-0">In sitting still long enough</p>
-            <p className="mb-0">To hear the soft yes of being.</p>
-            
-            <p className="mb-0 mt-6">You don't need more than that right now.</p>
-            <p className="mb-0 italic">You only need to be.</p>
-            
-            <p className="mb-0 mt-8 text-primary/80">Let the light come to you.</p>
-            <p className="mb-0">Let the moment pass softly,</p>
-            <p className="mb-0">Like it knows you're here</p>
-            <p className="mb-0 italic">And that's enough.</p>
+            <p className="mb-0 mt-0">Let’s begin—quietly.</p>
           </div>
         </div>
       </div>
