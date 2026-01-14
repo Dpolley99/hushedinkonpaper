@@ -2,7 +2,7 @@ export default function EditorialIntro() {
   return (
     <section className="py-32 relative overflow-hidden">
       {/* Decorative background patterns */}
-      <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-background to-secondary/20" />
+      <div className="absolute inset-0 bg-gradient-to-b from-accent/5 via-background to-secondary/20" />
       <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-secondary/8 rounded-full blur-3xl" />
       

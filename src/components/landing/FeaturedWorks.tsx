@@ -33,7 +33,7 @@ export default function FeaturedWorks() {
   return (
     <section className="py-32 relative overflow-hidden">
       {/* Decorative background */}
-      <div className="absolute inset-0 bg-gradient-to-tr from-accent/5 via-background to-secondary/20" />
+      <div className="absolute inset-0 bg-gradient-to-t from-accent/5 via-background to-secondary/20" />
       <div className="absolute top-20 left-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
       <div className="absolute bottom-20 right-1/4 w-80 h-80 bg-secondary/10 rounded-full blur-3xl" />
       

@@ -30,7 +30,7 @@ export function ThemeToggle() {
       variant="ghost"
       size="icon"
       onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
-      className="fixed top-6 right-6 z-50 hover:bg-parchment-200 dark:hover:bg-umber-800"
+      className="fixed top-1/4 right-6 z-50 hover:bg-parchment-200 dark:hover:bg-umber-800"
     >
       {resolvedTheme === 'dark' ? (
         <Sun className="h-5 w-5 text-sage-400" />

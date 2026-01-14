@@ -1,15 +1,16 @@
+import Navbar from '@/components/Navbar'
+import { ThemeToggle } from '@/components/ThemeToggle'
 import HeroSection from '@/components/landing/HeroSection'
 import EditorialIntro from '@/components/landing/EditorialIntro'
 import FeaturedWorks from '@/components/landing/FeaturedWorks'
 import QuotedExcerpt from '@/components/landing/QuotedExcerpt'
 import ReadingInvitation from '@/components/landing/ReadingInvitation'
 import Footer from '@/components/Footer'
-import { ThemeToggle } from '@/components/ThemeToggle'
 
 export default function Home() {
   return (
     <>
-      <ThemeToggle />
+      <Navbar />
       <main>
         <HeroSection />
         <EditorialIntro />

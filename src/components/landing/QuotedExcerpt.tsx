@@ -33,7 +33,7 @@ export default function QuotedExcerpt() {
       className="py-32 relative overflow-visible"
     >
       {/* Decorative background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-accent/5 to-background" />
+      <div className="absolute inset-0 bg-gradient-to-b from-accent/5 via-background to-secondary/20" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl" />
       
       {/* Radial pattern */}
